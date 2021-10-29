@@ -41,8 +41,9 @@ public class WeekOneAssessment {
         youTie = 0;
         youLost = 0;
         youWon = 0;
+        //loop to check if Player wants to play
         do{
-            
+            //loop to run for selected amount of rounds
             for(count = 0; count < rounds; count++){
            
                 System.out.println("1. Rock, 2. Paper, 3. Scissor: ");
@@ -50,6 +51,7 @@ public class WeekOneAssessment {
                 choice = userChoice.nextInt();
                 Random compRockPaper = new Random();
                 int rockPaperScissors = compRockPaper.nextInt(3) + 1;
+                //checking if tie, win or loss for player
                 if(choice == rockPaperScissors){
                     System.out.println("Tie");
                     youTie++;
@@ -84,6 +86,7 @@ public class WeekOneAssessment {
 
                 }
             }
+           //print out results of games 
         System.out.println("You won " + youWon + " Times");
         System.out.println("You lost " + youLost + " Times");
         System.out.println("You tied " + youTie + " Times");
